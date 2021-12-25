@@ -2,26 +2,26 @@
 <html>
 <head>
 <style>
-img {
-    max-width: 100%;
-    height: auto;
+picture img{
+  width: 100%;
 }
 </style>
 </head>
 <body>
-<div class="container">
-<picture>
-    <source
-        srcset="1511194376-cavachon-puppy-christmas-200.jpg 200w,
-                1511194376-cavachon-puppy-christmas-700.jpg 700w,
-                1511194376-cavachon-puppy-christmas.jpg 1200w"
-        sizes="(min-width: 60rem) 80vw,
-               (min-width: 40rem) 90vw,
-               100vw">
-    <img src="1511194376-cavachon-puppy-christmas.jpg" alt="Image description">
-</picture>
+  <picture>
+      <source media="(min-width: 992px)" srcset="1511194376-cavachon-puppy-christmas.jpg">
+      <source media="(min-width: 700px)" srcset="1511194376-cavachon-puppy-christmas-700.jpg">
+      <img src="1511194376-cavachon-puppy-christmas-300.jpg" alt="Dog 1"> 
+    </picture>
 
-</div>
+ <img srcset="hannah-grace-fk4tiMlDFF0-unsplash-1200x800-200.jpg 159w,
+                hannah-grace-fk4tiMlDFF0-unsplash-1200x800-700.jpg 257w,
+                hannah-grace-fk4tiMlDFF0-unsplash-1200x800.jpg 469w"
+          src="hannah-grace-fk4tiMlDFF0-unsplash-1200x800.jpg"
+          alt="Dog 2"
+          sizes="50vw">
+
+
 
 </body>
 </html>
