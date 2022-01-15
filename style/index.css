@@ -50,6 +50,8 @@ body{
         width:80%;
     }
 
+    
+
     #gallery{
         background-color: #262921;
         color:#A6B98A;
@@ -85,6 +87,11 @@ nav div:nth-child(1){
 }
 
     @media (min-width: 992px) {
+        .container{
+            max-width:fit-content;
+            width:80%;
+        }
+
         li.nav-list-item {
             flex: 0 0 auto;
             margin-bottom: 0;
@@ -147,7 +154,13 @@ nav div:nth-child(1){
             justify-content: space-around;
             margin-bottom:7%;
         }
+
+        .container{
+            max-width:fit-content;
+        
+        }
     }
+
 
     .navbar {
         display: flex;
