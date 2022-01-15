@@ -11,7 +11,7 @@
 
 </head>
 <body>
-  <header class="header1">
+  <!--<header class="header1">
     <nav class="navbar">
         <a href="#" class="nav-logo"><img class="img-fluid" src="slike/logo.png"></a>
         <ul class="nav-menu">
@@ -34,7 +34,24 @@
             <span class="bar"></span>
         </div>
     </nav>
-</header>
+</header>-->
+
+<nav class="navbar">
+  <div class="brand-title"><img class="img-fluid" src="slike/logo.png"></div>
+  <a href="#" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="#">početna</a></li>
+      <li><a href="#">o meni</a></li>
+      <li><a href="#">galerija</a></li>
+      <li><a href="#">kontakt</a></li>
+    </ul>
+  </div>
+</nav>
 
 
 <div class="header">
@@ -94,24 +111,12 @@
 </footer>
 
 <script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
 </script>
 </body>
 </html>
