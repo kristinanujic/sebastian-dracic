@@ -159,8 +159,9 @@ nav div:nth-child(1){
     }
     
     .brand-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin: .5rem;
+        font-family: 'Sacramento', cursive;
     }
     
     .navbar-links {
@@ -192,7 +193,7 @@ nav div:nth-child(1){
     
     .toggle-button {
         position: absolute;
-        top: 3rem;
+        top: 1.5rem;
         right: 1rem;
         display: none;
         flex-direction: column;
