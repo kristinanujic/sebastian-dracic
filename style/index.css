@@ -4,14 +4,14 @@ body{
 }
 
 .header{
-     background-image: url("http://www.zencontemporaryartgallery.com/wp-content/gallery/sebastijandracic/Sebastijan-Drac%CC%8Cic%CC%81-The-Island-2012-oil-on-canvas-140-x-200-cm.jpg") ;
+     background-image: url("http://www.zencontemporaryartgallery.com/wp-content/gallery/sebastijandracic/Sebastijan-Drac%CC%8Cic%CC%81-_The-universe-is-indifferent_-200x150-cm-ulje-na-platnu_oil-on-canvas-2017.-1.jpg") ;
      background-repeat: no-repeat;
     padding:10%;
     }
 
     .header p{
         margin: 0 auto;
-        width: 50%;
+       
         background: rgba(54, 54, 54, 0.3);
         padding:5%;
         color:#fff2fc;
@@ -92,6 +92,10 @@ nav div:nth-child(1){
             width:80%;
         }
 
+        header p{
+            width: 50%;
+        }
+
         li.nav-list-item {
             flex: 0 0 auto;
             margin-bottom: 0;
@@ -128,6 +132,10 @@ nav div:nth-child(1){
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
+        }
+
+        header p{
+            width: 70%;
         }
         #about div:nth-child(1){
             display: flex;
@@ -251,6 +259,10 @@ nav div:nth-child(1){
         .navbar {
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        header p{
+            width: 70%;
         }
     
         .toggle-button {
