@@ -34,12 +34,15 @@
         <h2>Kontakt</h2>
         <form>
             <label>Ime i prezime</label><br>
-            <input type="text" id="name" required><br>
+            <input type="text" id="name" ><br>
+            <span id="namemsg" class="display-block"></span>	<br>
             <label>E-mail</label><br>
-            <input type="email" id="mail" required><br>
+            <input type="text" id="mail" ><br>
+            <span id="mailmsg" class="display-block"></span>	<br>
             <label>Poruka</label><br>
-            <textarea id="poruka" required></textarea><br>
-            <button type="submit">Pošalji</button>
+            <textarea id="poruka" ></textarea><br> 
+            <span id="txtmsg" class="display-block"></span>	<br><br>
+            <button type="submit" onClick="return empty()">Pošalji</button>
         </form>
     </div>
     <div class="col-lg-6">
@@ -72,7 +75,79 @@
       navbarLinks.classList.toggle('active')
     })
 
+    function empty()   
+{
+	var name=document.getElementById("name").value;  
+  var email=document.getElementById("mail").value;  
+  var text=document.getElementById("poruka").value;  
+  let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+	if(name == "" || email=="" || text=="")     
+	{
+    if(name==""){
+		document.getElementById('namemsg').innerHTML = "Upišite ime";
+		document.getElementById('name').style.border = "1px solid #FF0000";	
+    document.getElementById('namemsg').style.color = "#FF0000";	
+	}
 
+  if(email == "")     
+	{
+		document.getElementById('mailmsg').innerHTML = "Upišite e-mail";
+		document.getElementById('mail').style.border = "1px solid #FF0000";	
+    document.getElementById('mailmsg').style.color = "#FF0000";	
+	}
+  if(text == "")     
+	{
+		document.getElementById('txtmsg').innerHTML = "Upišite poruku";
+		document.getElementById('poruka').style.border = "1px solid #FF0000";	
+    document.getElementById('txtmsg').style.color = "#FF0000";	
+
+	
+	}
+	return false;}
+
+  if(!regex.test(email)){
+    document.getElementById('mailmsg').innerHTML = "Neispravna e-mail adresa";
+		document.getElementById('mail').style.border = "1px solid #FF0000";	
+    document.getElementById('mailmsg').style.color = "#FF0000";	
+    return false;
+  }
+
+
+  if(name != "" || email!="" || text!="")     
+	{
+    if(name!=""){
+    document.getElementById('name').style.borderColor = "";
+		document.getElementById('namemsg').innerHTML = "";
+    }
+    if(email != "")     
+	{
+    document.getElementById('mail').style.borderColor = "";
+		document.getElementById('mailmsg').innerHTML = "";
+	}
+  if(text != "")     
+	{
+    document.getElementById('poruka').style.borderColor = "";
+		document.getElementById('txtmsg').innerHTML = "";
+	}
+  return false;
+	}
+
+  else{
+    document.getElementById('poruka').style.borderColor = "";
+    document.getElementById('poruka').value = "";
+		document.getElementById('txtmsg').innerHTML = "";
+    document.getElementById('mail').style.borderColor = "";
+		document.getElementById('mailmsg').innerHTML = "";
+    document.getElementById('name').style.borderColor = "";
+		document.getElementById('namemsg').innerHTML = "";
+    return true;
+  }
+
+ 
+
+
+  
+}
     </script>
     </body>
     </html>
