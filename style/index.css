@@ -21,7 +21,7 @@ body{
     #about{
         background-color: #191C15;
         color:#A6B98A;
-        padding: 2%;
+        padding: 5% 2% 5% 2%;
     }
     
     #bio button,#gallery button{
@@ -55,7 +55,7 @@ body{
     #gallery{
         background-color: #262921;
         color:#A6B98A;
-        padding:2%;
+        padding: 5% 2% 5% 2%;
     }
 
     footer{

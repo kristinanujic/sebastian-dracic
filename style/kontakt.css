@@ -103,7 +103,9 @@ nav div:nth-child(1){
             padding:6%;
         }
 
-        
+        img{
+            width:70%;
+        }
 
         li.nav-list-item {
             flex: 0 0 auto;
